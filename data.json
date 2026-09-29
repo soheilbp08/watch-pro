@@ -1,0 +1,256 @@
+
+{
+  "watches": [
+    {
+      "id": "swatch-1",
+      "brand": "Swatch",
+      "name": "Swatch Sistem51",
+      "description": "A modern Swiss automatic watch with a minimalist design, lightweight case, and distinctive Swatch character.",
+      "stock": 12,
+      "price": 280,
+      "image": "/watches/squer1.avif"
+    },
+    {
+      "id": "swatch-2",
+      "brand": "Swatch",
+      "name": "Swatch Moonphase",
+      "description": "A stylish Swiss watch featuring a clean dial, elegant details, and a refined contemporary appearance.",
+      "stock": 8,
+      "price": 320,
+      "image": "/watches/squer2.avif"
+    },
+    {
+      "id": "swatch-3",
+      "brand": "Swatch",
+      "name": "Swatch Irony",
+      "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
+      "stock": 15,
+      "price": 250,
+      "image": "/watches/squer3.avif"
+    },
+
+    {
+      "id": "omega-1",
+      "brand": "Omega",
+      "name": "Omega Seamaster",
+      "description": "A sophisticated Swiss dive watch known for its robust construction, precise movement, and timeless design.",
+      "stock": 5,
+      "price": 5200,
+      "image": "/watches/omega-1.jpg"
+    },
+    {
+      "id": "omega-2",
+      "brand": "Omega",
+      "name": "Omega Speedmaster",
+      "description": "A legendary chronograph featuring a classic black dial, precise mechanical movement, and iconic racing-inspired design.",
+      "stock": 4,
+      "price": 6800,
+      "image": "/watches/omega-2.jpg"
+    },
+    {
+      "id": "omega-3",
+      "brand": "Omega",
+      "name": "Omega Constellation",
+      "description": "An elegant luxury watch combining refined finishing, a sophisticated dial, and a distinctive contemporary case.",
+      "stock": 6,
+      "price": 5900,
+      "image": "/watches/omega-3.jpg"
+    },
+
+    {
+      "id": "citizen-1",
+      "brand": "Citizen",
+      "name": "Citizen Eco-Drive",
+      "description": "A practical Japanese watch powered by light, combining reliable performance with a clean and modern design.",
+      "stock": 20,
+      "price": 350,
+      "image": "/watches/citizen-1.jpg"
+    },
+    {
+      "id": "citizen-2",
+      "brand": "Citizen",
+      "name": "Citizen Promaster",
+      "description": "A professional-style sports watch built for durability with a bold dial and strong water-resistant construction.",
+      "stock": 14,
+      "price": 480,
+      "image": "/watches/citizen-2.jpg"
+    },
+    {
+      "id": "citizen-3",
+      "brand": "Citizen",
+      "name": "Citizen Tsuyosa",
+      "description": "A contemporary automatic watch featuring an integrated bracelet, colorful dial options, and a refined everyday style.",
+      "stock": 11,
+      "price": 420,
+      "image": "/watches/citizen-3.jpg"
+    },
+
+    {
+      "id": "seiko-1",
+      "brand": "Seiko",
+      "name": "Seiko Presage",
+      "description": "A Japanese mechanical watch combining traditional watchmaking details with an elegant and sophisticated dial.",
+      "stock": 10,
+      "price": 550,
+      "image": "/watches/seiko-1.jpg"
+    },
+    {
+      "id": "seiko-2",
+      "brand": "Seiko",
+      "name": "Seiko Prospex",
+      "description": "A rugged sports watch designed for demanding environments with strong durability and a highly readable dial.",
+      "stock": 9,
+      "price": 700,
+      "image": "/watches/seiko-2.jpg"
+    },
+    {
+      "id": "seiko-3",
+      "brand": "Seiko",
+      "name": "Seiko 5 Sports",
+      "description": "A versatile automatic watch offering a sporty design, reliable movement, and excellent everyday usability.",
+      "stock": 18,
+      "price": 390,
+      "image": "/watches/seiko-3.jpg"
+    },
+
+    {
+      "id": "rolex-1",
+      "brand": "Rolex",
+      "name": "Rolex Submariner",
+      "description": "An iconic luxury diving watch recognized for its robust construction, distinctive bezel, and timeless design.",
+      "stock": 2,
+      "price": 12500,
+      "image": "/watches/rolex-1.jpg"
+    },
+    {
+      "id": "rolex-2",
+      "brand": "Rolex",
+      "name": "Rolex Datejust",
+      "description": "A classic luxury watch featuring an elegant dial, date display, refined case proportions, and versatile styling.",
+      "stock": 3,
+      "price": 10500,
+      "image": "/watches/rolex-2.jpg"
+    },
+    {
+      "id": "rolex-3",
+      "brand": "Rolex",
+      "name": "Rolex Oyster Perpetual",
+      "description": "A clean and timeless luxury watch with a simple dial, durable Oyster case, and iconic Rolex design.",
+      "stock": 4,
+      "price": 8900,
+      "image": "/watches/rolex-3.jpg"
+    },
+
+    {
+      "id": "casio-1",
+      "brand": "Casio",
+      "name": "Casio G-Shock",
+      "description": "A highly durable digital watch designed to withstand shocks and demanding everyday conditions.",
+      "stock": 25,
+      "price": 180,
+      "image": "/watches/casio-1.jpg"
+    },
+    {
+      "id": "casio-2",
+      "brand": "Casio",
+      "name": "Casio Edifice",
+      "description": "A sporty stainless-steel watch combining a sophisticated appearance with practical chronograph functionality.",
+      "stock": 16,
+      "price": 220,
+      "image": "/watches/casio-2.jpg"
+    },
+    {
+      "id": "casio-3",
+      "brand": "Casio",
+      "name": "Casio Vintage",
+      "description": "A retro-inspired digital watch featuring a compact case, classic display, and distinctive vintage aesthetic.",
+      "stock": 22,
+      "price": 90,
+      "image": "/watches/casio-3.jpg"
+    },
+
+    {
+      "id": "tissot-1",
+      "brand": "Tissot",
+      "name": "Tissot PRX",
+      "description": "A Swiss sports watch with an integrated bracelet, sleek case profile, and distinctive retro-modern design.",
+      "stock": 9,
+      "price": 750,
+      "image": "/watches/tissot-1.jpg"
+    },
+    {
+      "id": "tissot-2",
+      "brand": "Tissot",
+      "name": "Tissot Gentleman",
+      "description": "An elegant Swiss watch designed for everyday wear with a refined dial and versatile stainless-steel case.",
+      "stock": 12,
+      "price": 680,
+      "image": "/watches/tissot-2.jpg"
+    },
+    {
+      "id": "tissot-3",
+      "brand": "Tissot",
+      "name": "Tissot Seastar",
+      "description": "A sporty Swiss dive watch offering a bold design, strong water resistance, and reliable everyday performance.",
+      "stock": 7,
+      "price": 620,
+      "image": "/watches/tissot-3.jpg"
+    },
+
+    {
+      "id": "longines-1",
+      "brand": "Longines",
+      "name": "Longines HydroConquest",
+      "description": "A Swiss sports watch combining diving-inspired functionality with elegant finishing and a refined case design.",
+      "stock": 6,
+      "price": 1450,
+      "image": "/watches/longines-1.jpg"
+    },
+    {
+      "id": "longines-2",
+      "brand": "Longines",
+      "name": "Longines Conquest",
+      "description": "A sophisticated sports watch offering a balanced design, automatic movement, and versatile everyday styling.",
+      "stock": 5,
+      "price": 1700,
+      "image": "/watches/longines-2.jpg"
+    },
+    {
+      "id": "longines-3",
+      "brand": "Longines",
+      "name": "Longines Master Collection",
+      "description": "An elegant Swiss mechanical watch featuring detailed finishing, a classic dial, and traditional watchmaking character.",
+      "stock": 4,
+      "price": 2300,
+      "image": "/watches/longines-3.jpg"
+    },
+
+    {
+      "id": "tag-heuer-1",
+      "brand": "TAG Heuer",
+      "name": "TAG Heuer Carrera",
+      "description": "A performance-focused Swiss chronograph inspired by motorsport, featuring a dynamic dial and sporty case.",
+      "stock": 5,
+      "price": 4200,
+      "image": "/watches/tag-heuer-1.jpg"
+    },
+    {
+      "id": "tag-heuer-2",
+      "brand": "TAG Heuer",
+      "name": "TAG Heuer Aquaracer",
+      "description": "A robust Swiss sports watch designed for water activities with a strong case and highly legible dial.",
+      "stock": 6,
+      "price": 3500,
+      "image": "/watches/tag-heuer-2.jpg"
+    },
+    {
+      "id": "tag-heuer-3",
+      "brand": "TAG Heuer",
+      "name": "TAG Heuer Monaco",
+      "description": "An instantly recognizable Swiss chronograph featuring a distinctive square case and motorsport-inspired character.",
+      "stock": 3,
+      "price": 5900,
+      "image": "/watches/tag-heuer-3.jpg"
+    }
+  ]
+}

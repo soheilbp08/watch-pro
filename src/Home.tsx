@@ -3,6 +3,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
+const st =
+  "absolute inset-0 rounded-4xl bg-gradient-to-t from-[#061A15]/80 via-[#0B2B24]/30 to-[#D4AF62]/10";
 export default function Home() {
   return (
     <>
@@ -44,11 +46,11 @@ export default function Home() {
       </div>
 
       {/* Collections */}
-      <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 mt-20">
+      <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 mt-20">
 
         {/* Collection 1 */}
         <div className="group w-64 overflow-hidden relative">
-          <Link to="/swatch">
+          <Link to="/watches">
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
@@ -61,12 +63,7 @@ export default function Home() {
             speed={800}
             className="h-[350px] w-full sm:h-[380px]"
             >
-          <div className="absolute inset-0 
-          rounded-4xl 
-          bg-gradient-to-t 
-          from-[#061A15]/80 
-          via-[#0B2B24]/30 
-          to-[#D4AF62]/10"></div>
+          <div className={st}></div>
             {[
               "squer1.avif",
               "squer2.avif",
@@ -91,11 +88,11 @@ export default function Home() {
           <h2 className="mt-8 text-center text-lg tracking-wider text-[#D4AF62] ">
             Swatch Collection
           </h2>
-            </Link>
+          </Link>
         </div>
 
         {/* Collection 2 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64 overflow-hidden rounded-2xl">
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
@@ -108,6 +105,7 @@ export default function Home() {
             speed={800}
             className="h-[350px] w-full sm:h-[380px]"
           >
+            <div className={st}></div>
             {["squer4.avif", "squer5.avif"].map((image, index) => (
               <SwiperSlide key={index}>
                 <img
@@ -128,7 +126,7 @@ export default function Home() {
         </div>
 
         {/* Collection 3 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64 overflow-hidden rounded-2xl">
           <Swiper
             slidesPerView={1}
             loop={true}
@@ -145,6 +143,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Luxury Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 
@@ -154,7 +153,7 @@ export default function Home() {
         </div>
 
         {/* Collection 4 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64   overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -165,6 +164,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Heritage Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 
@@ -174,7 +174,7 @@ export default function Home() {
         </div>
 
         {/* Collection 5 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64 overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -185,6 +185,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Elegance Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 
@@ -194,7 +195,7 @@ export default function Home() {
         </div>
 
         {/* Collection 6 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64   overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -205,6 +206,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Modern Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 
@@ -214,7 +216,7 @@ export default function Home() {
         </div>
 
         {/* Collection 7 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64   overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -225,6 +227,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Signature Collection"
               />
+              <div className={st}></div>  
             </SwiperSlide>
           </Swiper>
 
@@ -234,7 +237,7 @@ export default function Home() {
         </div>
 
         {/* Collection 8 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64   overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -245,6 +248,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Prestige Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 
@@ -254,7 +258,7 @@ export default function Home() {
         </div>
 
         {/* Collection 9 */}
-        <div className="group w-full overflow-hidden rounded-2xl">
+        <div className="group w-64   overflow-hidden rounded-2xl">
           <Swiper className="h-[350px] w-full sm:h-[380px]">
             <SwiperSlide>
               <img
@@ -265,6 +269,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 alt="Exclusive Collection"
               />
+              <div className={st}></div>
             </SwiperSlide>
           </Swiper>
 

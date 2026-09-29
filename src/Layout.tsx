@@ -3,9 +3,12 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import instagramIcon from "./assets/logos/insta.jpg";
-import telegramIcon from "./assets/logos/telegram.png";
-import locationIcon from "./assets/logos/location.jpg";
+import instagramIcon from "./assets/logos/instag.svg"
+import telegramIcon from "./assets/logos/teleg.svg";
+import locationIcon from "./assets/logos/location1.svg";
+import phone from "./assets/logos/phone.svg"
+import Mail from "./assets/logos/email2.svg"
+import logo from "./assets/Sohna logo/main.png"
 
 export default function Layout({
   children,
@@ -31,27 +34,31 @@ export default function Layout({
 
         {/* Logo */}
 
-        <Link to="/" className="flex flex-col">
+        <Link to="/" className=" inline-flex flex-col">
+        <div className=" flex gap-4 items-center  "> 
 
+        <img src={logo} className=" w-12 h-12  rounded-full ">
+        </img>
           <span
             className="
-              text-[27px]
-              font-bold
-              tracking-[5px]
-              text-[#D4AF62]
+            text-[27px]
+            font-bold
+            tracking-[5px]
+            text-[#D4AF62]
             "
-          >
+            >
             SOHNA
           </span>
+          </div>
 
           <span
             className="
-              mt-1
-              text-[8px]
-              tracking-[4px]
-              text-[#E8E1CF]
+            mt-1
+            text-[8px]
+            tracking-[4px]
+            text-[#E8E1CF]
             "
-          >
+            >
             WATCHES
           </span>
 
@@ -269,6 +276,7 @@ export default function Layout({
                 target="_blank"
                 rel="noreferrer"
                 className="
+                bg-emerald-100
                   flex
                   h-10
                   w-10
@@ -298,6 +306,7 @@ export default function Layout({
                 target="_blank"
                 rel="noreferrer"
                 className="
+                bg-emerald-100
                   flex
                   h-10
                   w-10
@@ -371,16 +380,25 @@ export default function Layout({
 
             {/* Phone */}
 
+            
+
             <a
               href="tel:+989123456789"
               className="
+              flex
+              gap-2
                 text-sm
                 text-[#F5F1E8]/65
                 transition
                 hover:text-[#D4AF62]
               "
             >
-              +98 912 345 6789
+
+              <img
+                src={phone}
+                alt="Location"
+                className="h-5 w-5 object-contain"
+                /><span>+98 912 345 6789</span>
             </a>
 
 
@@ -389,12 +407,16 @@ export default function Layout({
             <a
               href="mailto:info@sohna.com"
               className="
+              flex
+              gap-2
                 text-sm
                 text-[#F5F1E8]/65
                 transition
                 hover:text-[#D4AF62]
               "
             >
+              <img src={Mail} className="h-5
+              w-5 object-contain "></img>
               info@sohna.com
             </a>
 
