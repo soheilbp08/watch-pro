@@ -29,6 +29,36 @@
       "image": "/watches/squer3.avif"
     },
 
+    
+    {
+      "id": "swatch-3",
+      "brand": "Swatch",
+      "name": "Swatch Irony",
+      "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
+      "stock": 15,
+      "price": 250,
+      "image": "/watches/squer5.avif"
+    },
+    
+    
+    {
+      "id": "swatch-3",
+      "brand": "Swatch",
+      "name": "Swatch Irony",
+      "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
+      "stock": 15,
+      "price": 250,
+      "image": "/watches/squer6.avif"
+    },
+    {
+      "id": "swatch-3",
+      "brand": "Swatch",
+      "name": "Swatch Irony",
+      "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
+      "stock": 15,
+      "price": 250,
+      "image": "/watches/squer3.avif"
+    },
     {
       "id": "omega-1",
       "brand": "Omega",

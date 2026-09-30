@@ -50,7 +50,7 @@ export default function Home() {
 
         {/* Collection 1 */}
         <div className="group w-64 overflow-hidden relative">
-          <Link to="/watches">
+          <Link to="/watches/swatch">
           <Swiper
             spaceBetween={0}
             slidesPerView={1}

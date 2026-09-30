@@ -1,38 +1,42 @@
+import { useParams } from "react-router-dom";
+import data from "./data.json";
 import { Link } from "react-router-dom";
 
-interface Watch {
-  id: string | number;
-  image: string;
-  name: string;
-  price: number;
-}
+export default function Collections() {
+  const { brand } = useParams();
 
-function Collections({ watch }: { watch: Watch }) {
+  const watches = data.watches.filter(
+    (watch) =>
+      watch.brand.toLowerCase().replace(/\s+/g, "-") ===
+      brand?.toLowerCase()
+  );
+
   return (
-    <Link to={`/watch/${watch.id}`} className="block">
+    <div className="min-h-screen bg-[#0B2B24] p-10">
 
-      <div className="relative w-64 overflow-hidden rounded-2xl">
+      <h1 className="text-4xl text-[#D4AF62] mb-10">
+        {brand}
+      </h1>
 
-        <img
-          src={watch.image}
-          alt={watch.name}
-          className="w-full"
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#061A15]/80 via-[#0B2B24]/30 to-[#D4AF62]/10"></div>
-
-        <div className="absolute bottom-4 left-4 text-[#F5F1E8]">
-          <p>{watch.name}</p>
-
-          <p className="text-[#D4AF62]">
-            ${watch.price.toFixed(2)}
-          </p>
-        </div>
+        {watches.map((watch) => (
+          <div key={watch.id}>
+            <Link to={`/watch/${watch.id}`}>
+            <img
+              src={watch.image}
+              alt={watch.name}
+              className="w-full h-[400px]
+              rounded-4xl bg-gradient-to-t 
+              from-[#061A15]/80 
+              via-[#0B2B24]/30 to-[#D4AF62]/10"
+              />
+              </Link>
+          </div>
+        ))}
 
       </div>
 
-    </Link>
+    </div>
   );
 }
-
-export default Collections;

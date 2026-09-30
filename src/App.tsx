@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./Home"
-import Collections from "./watches";
+import Home from "./Home";
+import Watches from "./watches";
 import Show from "./show";
+import Collections from "./watches";
 
 function About() {
   return (
@@ -35,16 +36,23 @@ function Cart() {
 }
 
 function App() {
+
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/watches/:id" element={<Collections watch={undefined as never} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/show" element={<Show />} />
-      </Routes>
+<Routes>
+  <Route path="/" element={<Home />} />
+
+  {/* Collections */}
+  <Route
+  path="/watches/:brand" element={<Collections />}/>
+
+  {/* Single Watch */}
+  <Route path="/watch/:id" element={<Show />} />
+
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/cart" element={<Cart />} />
+</Routes>
     </Layout>
   );
 }
