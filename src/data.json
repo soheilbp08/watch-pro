@@ -1,4 +1,3 @@
-
 {
   "watches": [
     {
@@ -6,7 +5,7 @@
       "brand": "Swatch",
       "name": "Swatch Sistem51",
       "description": "A modern Swiss automatic watch with a minimalist design, lightweight case, and distinctive Swatch character.",
-      "stock": 12,
+      "stock": 0,
       "price": 280,
       "image": "/watches/squer1.avif"
     },
@@ -15,7 +14,7 @@
       "brand": "Swatch",
       "name": "Swatch Moonphase",
       "description": "A stylish Swiss watch featuring a clean dial, elegant details, and a refined contemporary appearance.",
-      "stock": 8,
+      "stock": 0,
       "price": 320,
       "image": "/watches/squer2.avif"
     },
@@ -28,8 +27,6 @@
       "price": 250,
       "image": "/watches/squer3.avif"
     },
-
-    
     {
       "id": "swatch-3",
       "brand": "Swatch",
@@ -39,8 +36,6 @@
       "price": 250,
       "image": "/watches/squer5.avif"
     },
-    
-    
     {
       "id": "swatch-3",
       "brand": "Swatch",
@@ -86,7 +81,6 @@
       "price": 5900,
       "image": "/watches/omega-3.jpg"
     },
-
     {
       "id": "citizen-1",
       "brand": "Citizen",
@@ -114,7 +108,6 @@
       "price": 420,
       "image": "/watches/citizen-3.jpg"
     },
-
     {
       "id": "seiko-1",
       "brand": "Seiko",
@@ -142,7 +135,6 @@
       "price": 390,
       "image": "/watches/seiko-3.jpg"
     },
-
     {
       "id": "rolex-1",
       "brand": "Rolex",
@@ -170,7 +162,6 @@
       "price": 8900,
       "image": "/watches/rolex-3.jpg"
     },
-
     {
       "id": "casio-1",
       "brand": "Casio",
@@ -198,7 +189,6 @@
       "price": 90,
       "image": "/watches/casio-3.jpg"
     },
-
     {
       "id": "tissot-1",
       "brand": "Tissot",
@@ -226,7 +216,6 @@
       "price": 620,
       "image": "/watches/tissot-3.jpg"
     },
-
     {
       "id": "longines-1",
       "brand": "Longines",
@@ -254,7 +243,6 @@
       "price": 2300,
       "image": "/watches/longines-3.jpg"
     },
-
     {
       "id": "tag-heuer-1",
       "brand": "TAG Heuer",
@@ -282,5 +270,14 @@
       "price": 5900,
       "image": "/watches/tag-heuer-3.jpg"
     }
-  ]
+  ],
+  "cart": [
+    {
+      "watchId": "swatch-1",
+      "quantity": 6,
+      "id": "APZ0C6QY9wE"
+    }
+  ],
+  "id": "jMRtuUuykjo",
+  "$schema": "./node_modules/json-server/schema.json"
 }

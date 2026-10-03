@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 node_modules
-public
 .oxlintrc.json
 package-lock.json 
 package.json 

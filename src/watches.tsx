@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 export default function Collections() {
   const { brand } = useParams();
 
-  const watches = data.watches.filter(
-    (watch) =>
-      watch.brand.toLowerCase().replace(/\s+/g, "-") ===
-      brand?.toLowerCase()
-  );
+  const watches = data.watches.filter((watch) => {
+    const watchBrand = watch.brand?.toLowerCase().replace(/\s+/g, "-") ?? "";
+    return watchBrand === brand?.toLowerCase();
+  });
 
   return (
     <div className="min-h-screen bg-[#0B2B24] p-10">
