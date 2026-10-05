@@ -3,28 +3,8 @@ import Layout from "./Layout";
 import Home from "./Home";
 import Watches from "./watches";
 import Show from "./show";
-import Collections from "./watches";
-
-function About() {
-  return (
-    <div className="p-16">
-      <h1 className="text-4xl text-[#D4AF62]">
-        About SOHNA
-      </h1>
-    </div>
-  );
-}
-
-function Contact() {
-  return (
-    <div className="p-16">
-      <h1 className="text-4xl text-[#D4AF62]">
-        Contact
-      </h1>
-    </div>
-  );
-}
-
+import About from "./About";
+import Contact from "./contact";
 function Cart() {
   return (
     <div className="p-16">
@@ -44,7 +24,10 @@ function App() {
 
   {/* Collections */}
   <Route
-  path="/watches/:brand" element={<Collections />}/>
+  path="/watches/:brand" element={<Watches />} />
+<Route path="/watches" element={<Watches />} />
+
+
 
   {/* Single Watch */}
   <Route path="/watch/:id" element={<Show />} />

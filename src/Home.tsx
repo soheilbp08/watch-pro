@@ -1,284 +1,397 @@
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
-const st =
-  "absolute inset-0 rounded-4xl bg-gradient-to-t from-[#061A15]/80 via-[#0B2B24]/30 to-[#D4AF62]/10";
+const collections = [
+  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 2500,
+  },
+  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 2700,
+  },
+  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 2900,
+  },
+
+  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 3100,
+  },  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 3300,
+  },
+  {
+    name: "Swatch",
+    route: "/watches/swatch",
+    folder: "./assets/swatch",
+    images: [
+      "squer1.avif",
+      "squer2.avif",
+      "squer3.avif",
+      "squer4.avif",
+      "squer5.avif",
+      "squer6.avif",
+    ],
+    delay: 3500,
+  },
+];
+
+const overlay =
+  "absolute inset-0 z-10 pointer-events-none rounded-3xl bg-gradient-to-t from-[#061A15]/90 via-[#0B2B24]/20 to-[#D4AF62]/10";
+
+const card =
+  "group relative w-full overflow-hidden rounded-3xl border border-[#D4AF62]/10 bg-[#0B2B24] shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-2 hover:border-[#D4AF62]/40 hover:shadow-2xl";
+
+const imageStyle =
+  "h-full w-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-105";
+
 export default function Home() {
   return (
-    <>
-      {/* Hero */}
-      <div className="flex min-h-[calc(100vh-82px)] items-center justify-center">
-        <h1 className="text-5xl font-bold text-[#D4AF62]">
-          Welcome to SOHNA
-        </h1>
-      </div>
+    <main className="min-h-screen bg-[#061A15] text-[#F5F1E8]">
 
-      {/* Hero Swiper */}
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+      {/* ==================== Hero ==================== */}
+      <section className="flex min-h-[calc(100vh-82px)] items-center justify-center px-4">
+        <div className="text-center">
+
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.4em] text-[#D4AF62] sm:text-sm">
+            Luxury Watches
+          </p>
+
+          <h1 className="text-4xl font-bold tracking-wider text-[#D4AF62] sm:text-5xl lg:text-6xl">
+            Welcome to SOHNA
+          </h1>
+
+          <div className="mx-auto mt-6 h-px w-24 bg-[#D4AF62]/60" />
+
+          <p className="mx-auto mt-5 max-w-md text-sm leading-7 text-[#F5F1E8]/60 sm:text-base">
+            Discover timeless designs crafted for those who appreciate
+            elegance and precision.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ==================== Hero Slider ==================== */}
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
-          loop={true}
+          loop
+          speed={1200}
           autoplay={{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
-          speed={1000}
           className="w-full"
         >
-          {["w-1.jpg", "w-2.jpg", "w-3.jpg", "w-5.jpg"].map((image, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative h-[300px] overflow-hidden rounded-2xl sm:h-[400px] lg:h-[500px]">
-                <img
-                  src={new URL(`./assets/${image}`, import.meta.url).href}
-                  className="h-full w-full object-cover"
-                  alt={`SOHNA Watch ${index + 1}`}
-                />
-
-                <div className="absolute inset-0 bg-black/40" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Collections */}
-      <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 mt-20">
-
-        {/* Collection 1 */}
-        <div className="group w-64 overflow-hidden relative">
-          <Link to="/watches/swatch">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-            speed={800}
-            className="h-[350px] w-full sm:h-[380px]"
-            >
-          <div className={st}></div>
-            {[
-              "squer1.avif",
-              "squer2.avif",
-              "squer3.avif",
-              "squer4.avif",
-              "squer5.avif",
-              "squer6.avif",
-            ].map((image, index) => (
+          {["w-1.jpg", "w-2.jpg", "w-3.jpg", "w-5.jpg"].map(
+            (image, index) => (
               <SwiperSlide key={index}>
-                <img
-                  src={new URL(
-                    `./assets/swatch/${image}`,
-                    import.meta.url
-                  ).href}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-120 rounded-4xl"
-                  alt="Classic Collection"
+
+                <div className="group relative h-[260px] overflow-hidden rounded-3xl sm:h-[400px] lg:h-[550px]">
+
+                  <img
+                    src={
+                      new URL(
+                        `./assets/${image}`,
+                        import.meta.url
+                      ).href
+                    }
+                    className="h-full w-full object-cover transition-transform duration-[2000ms] ease-in-out group-hover:scale-105"
+                    alt={`SOHNA Watch ${index + 1}`}
                   />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#061A15]/80 via-transparent to-black/20" />
+
+                  <div className="absolute bottom-8 left-6 z-10 sm:bottom-12 sm:left-10">
+
+                    <p className="mb-2 text-xs uppercase tracking-[0.3em] text-[#D4AF62]">
+                      SOHNA
+                    </p>
+
+                    <h2 className="text-2xl font-semibold text-white sm:text-4xl">
+                      Timeless Elegance
+                    </h2>
+
+                  </div>
+
+                </div>
+
               </SwiperSlide>
-            ))}
-          </Swiper>
+            )
+          )}
+        </Swiper>
 
-          <h2 className="mt-8 text-center text-lg tracking-wider text-[#D4AF62] ">
-            Swatch Collection
+      </section>
+
+      {/* ==================== Collections ==================== */}
+      <section className="mx-auto mt-20 w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+
+        {/* Section Header */}
+        <div className="mb-10 text-center">
+
+          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF62]">
+            Explore
+          </p>
+
+          <h2 className="mt-2 text-3xl font-semibold tracking-wide text-[#F5F1E8] sm:text-4xl">
+            Our Collections
           </h2>
-          </Link>
+
+          <div className="mx-auto mt-4 h-px w-20 bg-[#D4AF62]/50" />
+
         </div>
 
-        {/* Collection 2 */}
-        <div className="group w-64 overflow-hidden rounded-2xl">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{
-              delay: 2700,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-            speed={800}
-            className="h-[350px] w-full sm:h-[380px]"
-          >
-            <div className={st}></div>
-            {["squer4.avif", "squer5.avif"].map((image, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={new URL(
-                    `./assets/swatch/${image}`,
-                    import.meta.url
-                  ).href}
-                  className="h-full w-full object-cover"
-                  alt="Royal Collection"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        {/* Collection Grid */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Royal Collection
-          </h2>
-        </div>
+          {collections.map((collection) => (
+            <Link
+              key={collection.name}
+              to={collection.route}
+              className={card}
+            >
 
-        {/* Collection 3 */}
-        <div className="group w-64 overflow-hidden rounded-2xl">
-          <Swiper
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 2900 }}
-            modules={[Autoplay]}
-            className="h-[350px] w-full sm:h-[380px]"
-          >
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer6.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Luxury Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+              {/* Collection Image Slider */}
+              <Swiper
+                modules={[Autoplay]}
+                spaceBetween={0}
+                slidesPerView={1}
+                loop
+                speed={1000}
+                autoplay={{
+                  delay: collection.delay,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                className="h-[360px] w-full sm:h-[400px] lg:h-[430px]"
+              >
+                {collection.images.map((image, index) => (
+                  <SwiperSlide key={index}>
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Luxury Collection
-          </h2>
-        </div>
+                    <div className="relative h-full w-full">
 
-        {/* Collection 4 */}
-        <div className="group w-64   overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer7.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Heritage Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+                      <img
+                        src={
+                          new URL(
+                            `${collection.folder}/${image}`,
+                            import.meta.url
+                          ).href
+                        }
+                        className={imageStyle}
+                        alt={`${collection.name} Collection ${index + 1}`}
+                      />
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Heritage Collection
-          </h2>
-        </div>
+                      <div className={overlay} />
 
-        {/* Collection 5 */}
-        <div className="group w-64 overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer8.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Elegance Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+                    </div>
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Elegance Collection
-          </h2>
-        </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-        {/* Collection 6 */}
-        <div className="group w-64   overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer9.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Modern Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+              {/* Collection Info */}
+              <div className="relative z-20 flex items-center justify-between px-5 py-5">
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Modern Collection
-          </h2>
-        </div>
+                <div>
 
-        {/* Collection 7 */}
-        <div className="group w-64   overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer10.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Signature Collection"
-              />
-              <div className={st}></div>  
-            </SwiperSlide>
-          </Swiper>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF62]/60">
+                    Collection
+                  </p>
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Signature Collection
-          </h2>
-        </div>
+                  <h3 className="mt-1 text-lg font-medium tracking-wider text-[#D4AF62]">
+                    {collection.name}
+                  </h3>
 
-        {/* Collection 8 */}
-        <div className="group w-64   overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer11.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Prestige Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+                </div>
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Prestige Collection
-          </h2>
-        </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF62]/30 text-lg text-[#D4AF62] transition-all duration-300 group-hover:border-[#D4AF62] group-hover:bg-[#D4AF62] group-hover:text-[#061A15]">
+                  →
+                </span>
 
-        {/* Collection 9 */}
-        <div className="group w-64   overflow-hidden rounded-2xl">
-          <Swiper className="h-[350px] w-full sm:h-[380px]">
-            <SwiperSlide>
-              <img
-                src={new URL(
-                  "./assets/swatch/squer12.avif",
-                  import.meta.url
-                ).href}
-                className="h-full w-full object-cover"
-                alt="Exclusive Collection"
-              />
-              <div className={st}></div>
-            </SwiperSlide>
-          </Swiper>
+              </div>
 
-          <h2 className="mt-4 text-center text-lg tracking-wider text-[#D4AF62]">
-            Exclusive Collection
-          </h2>
+            </Link>
+          ))}
+
         </div>
 
       </section>
-    </>
+{/* ================= BRAND VIDEO ================= */}
+
+<section className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+
+  <div className="relative overflow-hidden rounded-3xl border border-[#D4AF62]/15 bg-[#0B2B24] shadow-2xl">
+
+    {/* Video */}
+
+    <video
+      src={new URL("./assets/video.mp4", import.meta.url).href}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="
+        h-[320px]
+        w-full
+        object-cover
+        sm:h-[450px]
+        lg:h-[600px]
+      "
+    />
+
+    {/* Dark Overlay */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        bg-gradient-to-t
+        from-[#061A15]
+        via-[#061A15]/45
+        to-[#061A15]/10
+      "
+    />
+
+    {/* Gold Glow */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        bg-gradient-to-r
+        from-[#061A15]/40
+        via-transparent
+        to-[#D4AF62]/5
+      "
+    />
+
+    {/* Content */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        z-10
+        flex
+        flex-col
+        items-center
+        justify-end
+        px-6
+        pb-10
+        text-center
+        sm:pb-14
+        lg:pb-16
+      "
+    >
+
+      <p
+        className="
+          text-[10px]
+          uppercase
+          tracking-[0.45em]
+          text-[#D4AF62]
+          sm:text-xs
+        "
+      >
+        The SOHNA Experience
+      </p>
+
+      <h2
+        className="
+          mt-3
+          text-3xl
+          font-semibold
+          tracking-wide
+          text-[#F5F1E8]
+          sm:text-4xl
+          lg:text-5xl
+        "
+      >
+        Time, Reimagined.
+      </h2>
+
+      <div className="mt-5 h-px w-16 bg-[#D4AF62]/70" />
+
+      <p
+        className="
+          mt-5
+          max-w-xl
+          text-xs
+          leading-6
+          text-[#F5F1E8]/60
+          sm:text-sm
+          sm:leading-7
+        "
+      >
+        Discover the beauty of precision, craftsmanship and timeless
+        elegance with SOHNA.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+    </main>
   );
 }
