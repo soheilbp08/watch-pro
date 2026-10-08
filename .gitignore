@@ -25,7 +25,6 @@ dist-ssr
 node_modules
 .oxlintrc.json
 package-lock.json 
-package.json 
 README.md 
 tsconfig.app.json
 tsconfig.json 
