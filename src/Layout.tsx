@@ -9,7 +9,7 @@ import telegramIcon from "./assets/logos/teleg.svg";
 import locationIcon from "./assets/logos/location1.svg";
 import phone from "./assets/logos/phone.svg";
 import Mail from "./assets/logos/email2.svg";
-import logo from "./assets/Sohna logo/main.png";
+import logo from "./assets/Sohna_logo/main.png";
 
 export default function Layout({
   children,
