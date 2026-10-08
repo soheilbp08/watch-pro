@@ -65,42 +65,180 @@ export default function Show() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         {/* تصویر */}
+
         <div className="group relative">
 
-          <div className="
-            absolute inset-0
-            rounded-2xl
-            bg-[#D4AF62]/10
-            blur-2xl
-            opacity-0
-            group-hover:opacity-100
-            transition duration-500
-          " />
+  {/* Outer Glow */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -inset-4
+      rounded-[28px]
+      bg-[#D4AF62]/10
+      opacity-0
+      blur-3xl
+      transition-all
+      duration-700
+      ease-in-out
+      group-hover:opacity-100
+    "
+  />
 
-          <div className="
-            relative
-            overflow-hidden
-            rounded-2xl
-            border border-[#D4AF62]/20
-            bg-[#102F28]
-            p-6
-          ">
-            <img
-              src={watch.image}
-              alt={watch.name}
-              className="
-                w-full
-                h-[450px]
-                object-contain
-                transition-transform
-                duration-700
-                group-hover:scale-105
-              "
-            />
-          </div>
+  {/* Card */}
+  <div
+    className="
+      relative
+      overflow-hidden
+      rounded-[28px]
+      border
+      border-[#D4AF62]/20
+      bg-gradient-to-br
+      from-[#163C33]
+      via-[#102F28]
+      to-[#09221D]
+      p-5
+      shadow-[0_20px_60px_rgba(0,0,0,0.25)]
+      transition-all
+      duration-700
+      ease-in-out
 
-        </div>
+      group-hover:-translate-y-2
+      group-hover:border-[#D4AF62]/50
+      group-hover:shadow-[0_25px_70px_rgba(212,175,98,0.15)]
+    "
+  >
 
+    {/* Top Shine */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -top-32
+        -right-32
+        h-64
+        w-64
+        rounded-full
+        bg-[#D4AF62]/10
+        blur-3xl
+        transition-all
+        duration-700
+        ease-in-out
+        group-hover:scale-150
+        group-hover:bg-[#D4AF62]/15
+      "
+    />
+
+    {/* Image Area */}
+    <div
+      className="
+        relative
+        flex
+        h-[450px]
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-2xl
+        bg-[#0B2B24]
+        border
+        border-[#D4AF62]/10
+      "
+    >
+
+      {/* Image Glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          h-56
+          w-56
+          rounded-full
+          bg-[#D4AF62]/10
+          blur-3xl
+          opacity-0
+          transition-all
+          duration-700
+          ease-in-out
+          group-hover:opacity-100
+        "
+      />
+
+      <img
+        src={watch.image}
+        alt={watch.name}
+        className="
+          relative
+          z-10
+          h-full
+          w-full
+          object-contain
+          p-8
+          drop-shadow-[0_20px_25px_rgba(0,0,0,0.45)]
+          transition-all
+          duration-700
+          ease-in-out
+
+          group-hover:scale-110
+          group-hover:drop-shadow-[0_25px_35px_rgba(212,175,98,0.18)]
+        "
+      />
+
+      {/* Corner Decoration */}
+      <div
+        className="
+          absolute
+          left-4
+          top-4
+          h-8
+          w-8
+          border-l
+          border-t
+          border-[#D4AF62]/30
+          transition-all
+          duration-500
+          group-hover:h-12
+          group-hover:w-12
+          group-hover:border-[#D4AF62]/70
+        "
+      />
+
+      <div
+        className="
+          absolute
+          bottom-4
+          right-4
+          h-8
+          w-8
+          border-b
+          border-r
+          border-[#D4AF62]/30
+          transition-all
+          duration-500
+          group-hover:h-12
+          group-hover:w-12
+          group-hover:border-[#D4AF62]/70
+        "
+      />
+
+    </div>
+
+    {/* Bottom Line */}
+    <div
+      className="
+        mt-5
+        h-px
+        w-0
+        bg-[#D4AF62]
+        transition-all
+        duration-700
+        ease-in-out
+        group-hover:w-full
+      "
+    />
+
+  </div>
+
+</div>
         {/* مشخصات */}
         <div className="flex flex-col">
 

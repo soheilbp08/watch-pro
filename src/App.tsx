@@ -5,20 +5,17 @@ import Watches from "./watches";
 import Show from "./show";
 import About from "./About";
 import Contact from "./contact";
-function Cart() {
-  return (
-    <div className="p-16">
-      <h1 className="text-4xl text-[#D4AF62]">
-        Your Cart
-      </h1>
-    </div>
-  );
-}
+import ScrollToTop from "./scroll";
+import Pay from "./pay";
+import Login from "./login";
+import Signup from "./signup";
 
 function App() {
 
   return (
     <Layout>
+      <ScrollToTop />
+
 <Routes>
   <Route path="/" element={<Home />} />
 
@@ -34,7 +31,9 @@ function App() {
 
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
-  <Route path="/cart" element={<Cart />} />
+  <Route path="/pay" element={<Pay />} />
+  <Route path="/login" element={<Login/>}/>
+  <Route path="/signup" element={<Signup/>}/>
 </Routes>
     </Layout>
   );

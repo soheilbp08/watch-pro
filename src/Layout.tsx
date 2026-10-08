@@ -2,6 +2,7 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import data from "./data.json";
 
 import instagramIcon from "./assets/logos/instag.svg";
 import telegramIcon from "./assets/logos/teleg.svg";
@@ -18,6 +19,11 @@ export default function Layout({
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+const filteredWatches = data.watches.filter((watch) =>
+  `${watch.name} ${watch.brand}`
+    .toLowerCase()
+    .includes(search.toLowerCase())
+);
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -35,6 +41,9 @@ export default function Layout({
           border-b border-[#D4AF62]/25
           bg-[#0B2B24]/95
           backdrop-blur-md
+          transition-all
+          duration-300
+          lg:backdrop-blur-none
         "
       >
         <div
@@ -55,7 +64,7 @@ export default function Layout({
           {/* ================= LOGO ================= */}
 
           <Link
-            to="/"
+            to="/login"
             onClick={closeMenu}
             className="inline-flex flex-col shrink-0"
           >
@@ -172,78 +181,237 @@ export default function Layout({
           {/* ================= RIGHT SIDE ================= */}
 
           <div className="flex items-center gap-2 sm:gap-3">
+{/* ================= SEARCH ================= */}
 
-            {/* Search */}
+<div className="relative flex items-center">
 
-            <div className="flex items-center">
+  {/* Search Button */}
 
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Search"
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    aria-label="Search"
+    className="
+      relative z-[110]
+      flex h-10 w-10 items-center justify-center
+      rounded-full
+      border border-[#D4AF62]/35
+      text-[#D4AF62]
+      transition-all
+      duration-300
+      ease-in-out
+      hover:bg-[#D4AF62]
+      hover:text-[#0B2B24]
+      hover:scale-105
+      active:scale-95
+      sm:h-11 sm:w-11
+    "
+  >
+    🔍
+  </button>
+
+  {/* Search Box */}
+
+  <div
+    className={`
+      absolute
+      right-0
+      top-[calc(100%+14px)]
+      z-[100]
+      origin-top-right
+      transition-all
+      duration-300
+      ease-in-out
+
+      ${
+        isOpen
+          ? "visible translate-y-0 scale-100 opacity-100"
+          : "invisible -translate-y-2 scale-95 opacity-0 pointer-events-none"
+      }
+    `}
+  >
+
+    <div
+      className="
+        w-[280px]
+        rounded-2xl
+        border border-[#D4AF62]/30
+        bg-[#0B2B24]/98
+        p-2
+        shadow-[0_15px_40px_rgba(0,0,0,0.35)]
+        backdrop-blur-xl
+        sm:w-[320px]
+      "
+    >
+
+      {/* Input */}
+
+      <div
+        className="
+          flex
+          items-center
+          gap-2
+          rounded-xl
+          border border-[#D4AF62]/25
+          bg-[#F5F1E8]
+          px-3
+          transition-all
+          duration-300
+          ease-in-out
+          focus-within:border-[#D4AF62]
+          focus-within:ring-1
+          focus-within:ring-[#D4AF62]/30
+        "
+      >
+
+        <span className="text-lg text-[#0B2B24]">
+          🔍
+        </span>
+
+        <input
+          autoFocus={isOpen}
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search watches..."
+          className="
+            h-11
+            w-full
+            bg-transparent
+            text-sm
+            text-[#0B2B24]
+            outline-none
+            placeholder:text-[#0B2B24]/45
+          "
+        />
+
+        {/* Clear */}
+
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="
+              text-lg
+              text-[#0B2B24]/50
+              transition-all
+              duration-200
+              hover:scale-110
+              hover:text-[#0B2B24]
+            "
+          >
+            ×
+          </button>
+        )}
+
+      </div>
+
+
+      {/* Results */}
+
+      {search.trim() !== "" && (
+        <div
+          className="
+            mt-2
+            max-h-[350px]
+            overflow-y-auto
+            rounded-xl
+            border border-[#D4AF62]/15
+            bg-[#0B2B24]
+          "
+        >
+
+          {filteredWatches.length > 0 ? (
+
+            filteredWatches.slice(0, 5).map((watch) => (
+
+              <Link
+                key={watch.id}
+                to={`/watch/${watch.id}`}
+                onClick={() => {
+                  setIsOpen(false);
+                  setSearch("");
+                }}
                 className="
                   flex
-                  h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  border border-[#D4AF62]/35
-                  text-[#D4AF62]
-                  transition-all
-                  duration-300
-                  hover:bg-[#D4AF62]
-                  hover:text-[#0B2B24]
-                  sm:h-11 sm:w-11
-                "
-              >
-                🔍
-              </button>
-
-              <div
-                className={`
-                  absolute
-                  right-16
-                  top-[76px]
-                  overflow-hidden
+                  items-center
+                  gap-3
+                  border-b border-[#D4AF62]/10
+                  p-3
                   transition-all
                   duration-300
                   ease-in-out
-                  sm:right-20
-                  lg:static
-                  lg:ml-2
-                  ${
-                    isOpen
-                      ? "w-[220px] opacity-100"
-                      : "w-0 opacity-0 lg:hidden"
-                  }
-                `}
+                  hover:bg-[#D4AF62]/10
+                  hover:pl-4
+                "
               >
-                <input
-                  type="text"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  placeholder="Search watches..."
+
+                <img
+                  src={watch.image}
+                  alt={watch.name}
                   className="
-                    w-[220px]
+                    h-12
+                    w-12
+                    shrink-0
                     rounded-lg
-                    border
-                    border-[#D4AF62]/20
-                    bg-[#F5F1E8]
-                    px-4
-                    py-2.5
-                    text-sm
-                    text-black
-                    outline-none
-                    placeholder:text-gray-500
+                    object-cover
+                    transition-transform
+                    duration-300
+                    ease-in-out
+                    group-hover:scale-105
                   "
                 />
-              </div>
 
+                <div className="min-w-0">
+
+                  <p className="
+                    truncate
+                    text-sm
+                    text-[#F5F1E8]
+                  ">
+                    {watch.name}
+                  </p>
+
+                  <p className="
+                    mt-1
+                    text-xs
+                    text-[#D4AF62]
+                  ">
+                    {watch.brand} · ${watch.price}
+                  </p>
+
+                </div>
+
+              </Link>
+
+            ))
+
+          ) : (
+
+            <div className="
+              px-4
+              py-5
+              text-center
+              text-sm
+              text-[#F5F1E8]/50
+            ">
+              No watches found
             </div>
+
+          )}
+
+        </div>
+      )}
+
+    </div>
+
+  </div>
+
+</div>
 
 
             {/* Cart */}
 
             <Link
-              to="/cart"
+              to="/pay"
               aria-label="Cart"
               className="
                 flex

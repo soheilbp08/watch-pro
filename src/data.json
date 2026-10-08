@@ -5,7 +5,7 @@
       "brand": "Swatch",
       "name": "Swatch Sistem51",
       "description": "A modern Swiss automatic watch with a minimalist design, lightweight case, and distinctive Swatch character.",
-      "stock": 6,
+      "stock": 2,
       "price": 280,
       "image": "/watches/squer1.avif"
     },
@@ -23,7 +23,7 @@
       "brand": "Swatch",
       "name": "Swatch Irony",
       "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
-      "stock": 0,
+      "stock": 14,
       "price": 250,
       "image": "/watches/squer3.avif"
     },
@@ -50,7 +50,7 @@
       "brand": "Swatch",
       "name": "Swatch Irony",
       "description": "A versatile stainless-steel watch designed for everyday wear with a modern and durable construction.",
-      "stock": 15,
+      "stock": 14,
       "price": 250,
       "image": "/watches/squer4.avif"
     }
@@ -58,12 +58,12 @@
   "cart": [
     {
       "watchId": "swatch-1",
-      "quantity": 1,
+      "quantity": 5,
       "id": "APZ0C6QY9wE"
     },
     {
       "watchId": "swatch-3",
-      "quantity": 15,
+      "quantity": 1,
       "id": "7_ETyVAqN5E"
     }
   ],
