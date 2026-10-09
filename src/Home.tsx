@@ -8,13 +8,13 @@ const collections = [
   {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
-      "squer1.avif",
       "squer2.avif",
-      "squer3.avif",
-      "squer4.avif",
+      "squer1.avif",
       "squer5.avif",
+      "squer4.avif",
+      "squer3.avif",
       "squer6.avif",
     ],
     delay: 2500,
@@ -22,7 +22,7 @@ const collections = [
   {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
       "squer1.avif",
       "squer2.avif",
@@ -36,13 +36,13 @@ const collections = [
   {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
-      "squer1.avif",
-      "squer2.avif",
-      "squer3.avif",
       "squer4.avif",
+      "squer1.avif",
+      "squer3.avif",
       "squer5.avif",
+      "squer2.avif",
       "squer6.avif",
     ],
     delay: 2900,
@@ -51,26 +51,26 @@ const collections = [
   {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
+      "squer3.avif",
       "squer1.avif",
       "squer2.avif",
-      "squer3.avif",
+      "squer6.avif",
       "squer4.avif",
       "squer5.avif",
-      "squer6.avif",
     ],
     delay: 3100,
   },  {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
       "squer1.avif",
-      "squer2.avif",
-      "squer3.avif",
-      "squer4.avif",
       "squer5.avif",
+      "squer3.avif",
+      "squer2.avif",
+      "squer4.avif",
       "squer6.avif",
     ],
     delay: 3300,
@@ -78,14 +78,14 @@ const collections = [
   {
     name: "Swatch",
     route: "/watches/swatch",
-    folder: "./assets/swatch",
+    folder: "/watches/swatch",
     images: [
-      "squer1.avif",
+      "squer6.avif",
       "squer2.avif",
       "squer3.avif",
+      "squer1.avif",
       "squer4.avif",
       "squer5.avif",
-      "squer6.avif",
     ],
     delay: 3500,
   },
@@ -149,12 +149,7 @@ export default function Home() {
                 <div className="group relative h-[260px] overflow-hidden rounded-3xl sm:h-[400px] lg:h-[550px]">
 
                   <img
-                    src={
-                      new URL(
-                        `./assets/${image}`,
-                        import.meta.url
-                      ).href
-                    }
+                    src={`/watches/${image}`}
                     className="h-full w-full object-cover transition-transform duration-[2000ms] ease-in-out group-hover:scale-105"
                     alt={`SOHNA Watch ${index + 1}`}
                   />
@@ -284,7 +279,7 @@ export default function Home() {
     {/* Video */}
 
     <video
-      src={new URL("./assets/video.mp4", import.meta.url).href}
+src="/watches/video.mp4"
       autoPlay
       muted
       loop

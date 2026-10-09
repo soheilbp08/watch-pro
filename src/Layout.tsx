@@ -3,13 +3,12 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "./data.json";
-
-import instagramIcon from "./assets/logos/instag.svg";
-import telegramIcon from "./assets/logos/teleg.svg";
-import locationIcon from "./assets/logos/location1.svg";
-import phone from "./assets/logos/phone.svg";
-import Mail from "./assets/logos/email2.svg";
-import logo from "./assets/Sohna_logo/main.png";
+const instagramIcon = "/watches/logos/instag.svg";
+const telegramIcon = "/watches/logos/teleg.svg";
+const locationIcon = "/watches/logos/location1.svg";
+const logo = "/watches/Sohna_logo/main.png";
+const phone = "/watches/logos/phone.svg";
+const Mail = "/watches/logos/email2.svg";
 
 export default function Layout({
   children,

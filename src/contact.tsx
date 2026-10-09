@@ -1,11 +1,11 @@
 
 import { useState } from "react";
 
-import instagramIcon from "./assets/logos/instag.svg";
-import telegramIcon from "./assets/logos/teleg.svg";
-import locationIcon from "./assets/logos/location1.svg";
-import phoneIcon from "./assets/logos/phone.svg";
-import emailIcon from "./assets/logos/email2.svg";
+const instagramIcon = "/watches/logos/instag.svg";
+const telegramIcon = "/watches/logos/teleg.svg";
+const locationIcon = "/watches/logos/location1.svg";
+const phoneIcon = "/watches/logos/phone.svg";
+const emailIcon = "/watches/logos/email2.svg";
 
 export default function Contact() {
   const [form, setForm] = useState({
